@@ -68,7 +68,7 @@ export default function ClosingSection({ name = 'Sophia', onOpenLetter }) {
 
         {/* Handwritten-style closing letter */}
         <div
-          className="glass reveal delay-200"
+          className="glass closing-letter reveal delay-200"
           style={{
             borderRadius: 24,
             padding: 'clamp(28px, 5vw, 48px)',

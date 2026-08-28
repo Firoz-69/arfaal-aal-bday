@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IntroScreen from './components/IntroScreen';
 
 import PetalBackground          from './components/PetalBackground';
 import Navbar                   from './components/Navbar';
@@ -18,6 +19,7 @@ import LoveLetterModal          from './components/LoveLetterModal';
 const RECIPIENT_NAME = 'Sophia';
 
 export default function App() {
+  const [introDone, setIntroDone] = useState(false);
   const [letterOpen, setLetterOpen] = useState(false);
 
   const openLetter = () => setLetterOpen(true);
@@ -25,6 +27,11 @@ export default function App() {
 
   return (
     <>
+      {/* ── INTRO SCREEN ── */}
+      {!introDone && (
+        <IntroScreen name={RECIPIENT_NAME} onDone={() => setIntroDone(true)} />
+      )}
+
       {/* Falling petals — fixed background layer */}
       <PetalBackground />
 

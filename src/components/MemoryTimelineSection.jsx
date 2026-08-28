@@ -97,7 +97,7 @@ export default function MemoryTimelineSection() {
         </div>
 
         {/* Timeline */}
-        <div style={{ position: 'relative', paddingLeft: 56 }}>
+        <div className="timeline-indent" style={{ position: 'relative', paddingLeft: 56 }}>
           {/* Vertical line */}
           <div className="timeline-line" />
 
@@ -123,7 +123,7 @@ export default function MemoryTimelineSection() {
 
                 {/* Card */}
                 <div
-                  className="glass"
+                  className="glass timeline-card-grid"
                   style={{
                     flex: 1,
                     borderRadius: 16,
@@ -161,6 +161,7 @@ export default function MemoryTimelineSection() {
                     </p>
                   </div>
                   <img
+                    className="timeline-card-img"
                     src={img}
                     alt={title}
                     style={{

@@ -60,7 +60,7 @@ export default function RotatingTaglineSection() {
         </div>
 
         {/* Rotating tagline */}
-        <div style={{ minHeight: 120, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="tagline-container" style={{ minHeight: 120, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <h2
             className="font-serif"
             style={{

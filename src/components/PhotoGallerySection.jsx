@@ -192,6 +192,7 @@ export default function PhotoGallerySection() {
             {PHOTOS.map((p, i) => (
               <button
                 key={i}
+                className="gallery-thumb"
                 onClick={() => setCurrent(i)}
                 aria-label={`Go to photo ${i + 1}`}
                 style={{

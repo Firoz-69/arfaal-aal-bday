@@ -40,7 +40,7 @@ export default function UnlockLetterSection({ onOpenLetter }) {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: 60,
+          gap: 'clamp(28px, 5vw, 60px)',
           alignItems: 'center',
         }}>
           {/* Illustration side */}

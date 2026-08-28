@@ -459,12 +459,13 @@ export default function InteractiveMomentsSection() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
+        <div className="moments-layout" style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
           {/* Tab list */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 210, flexShrink: 0 }}>
+          <div className="moments-tabs" style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 210, flexShrink: 0 }}>
             {MOMENTS.map(({ id, icon: Icon, label, desc }) => (
               <button
                 key={id}
+                className="moments-tab-btn"
                 onClick={() => setActive(id)}
                 style={{
                   display: 'flex', alignItems: 'flex-start', gap: 12,
@@ -496,7 +497,7 @@ export default function InteractiveMomentsSection() {
                     {label}
                   </p>
                   {id === active && (
-                    <p style={{ fontSize: '0.73rem', color: 'var(--text-faint)' }}>{desc}</p>
+                    <p className="moments-tab-desc" style={{ fontSize: '0.73rem', color: 'var(--text-faint)' }}>{desc}</p>
                   )}
                 </div>
               </button>

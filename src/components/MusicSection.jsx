@@ -52,7 +52,7 @@ export default function MusicSection() {
 
           {/* Player card */}
           <div
-            className="glass"
+            className="glass music-card"
             style={{
               borderRadius: 28,
               padding: 32,
@@ -76,7 +76,7 @@ export default function MusicSection() {
                   filter: 'blur(4px)',
                 }}
               />
-              <div style={{
+              <div className="music-album" style={{
                 width: 160, height: 160,
                 borderRadius: '50%',
                 overflow: 'hidden',
@@ -163,13 +163,14 @@ export default function MusicSection() {
             </div>
 
             {/* Controls */}
-            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', alignItems: 'center' }}>
+            <div className="music-controls" style={{ display: 'flex', gap: 20, justifyContent: 'center', alignItems: 'center' }}>
               <button style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
                 <SkipBack size={20} />
               </button>
               <button
                 onClick={() => setPlaying(p => !p)}
                 aria-label={playing ? 'Pause' : 'Play'}
+                className="music-play-btn"
                 style={{
                   width: 60, height: 60,
                   borderRadius: '50%',

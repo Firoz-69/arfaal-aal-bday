@@ -77,6 +77,7 @@ export default function HeroSection({ onOpenLetter }) {
       {/* Content */}
       <div
         ref={headlineRef}
+        className="hero-content"
         style={{
           position: 'relative',
           zIndex: 2,
@@ -157,7 +158,7 @@ export default function HeroSection({ onOpenLetter }) {
 
       {/* Floating badge overlapping edge */}
       <div
-        className="float-anim"
+        className="float-anim hero-float-badge"
         style={{
           position: 'absolute',
           bottom: 100,

@@ -12,6 +12,7 @@ export default function LoveLetterModal({ isOpen, onClose, name = 'Sophia' }) {
 
   return (
     <div
+      className="modal-wrap"
       style={{
         position: 'fixed', inset: 0, zIndex: 1000,
         background: 'rgba(10,4,16,0.88)',
@@ -23,18 +24,20 @@ export default function LoveLetterModal({ isOpen, onClose, name = 'Sophia' }) {
       }}
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div style={{
-        background: 'linear-gradient(145deg, var(--bg-deep) 0%, var(--bg-warm) 100%)',
-        border: '1px solid var(--border-strong)',
-        borderRadius: 28,
-        maxWidth: 500,
-        width: '100%',
-        maxHeight: '90vh',
-        overflowY: 'auto',
-        boxShadow: '0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(232,117,138,0.15)',
-        animation: 'scaleIn 0.4s cubic-bezier(0.34,1.56,0.64,1)',
-        position: 'relative',
-      }}>
+      <div
+        className="modal-inner"
+        style={{
+          background: 'linear-gradient(145deg, var(--bg-deep) 0%, var(--bg-warm) 100%)',
+          border: '1px solid var(--border-strong)',
+          borderRadius: 28,
+          maxWidth: 500,
+          width: '100%',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          boxShadow: '0 32px 80px rgba(0,0,0,0.6), 0 0 60px rgba(232,117,138,0.15)',
+          animation: 'scaleIn 0.4s cubic-bezier(0.34,1.56,0.64,1)',
+          position: 'relative',
+        }}>
         {/* Close button */}
         <button
           onClick={onClose}
@@ -53,7 +56,7 @@ export default function LoveLetterModal({ isOpen, onClose, name = 'Sophia' }) {
           <X size={16} />
         </button>
 
-        <div style={{ padding: '40px 36px' }}>
+        <div className="modal-body" style={{ padding: '40px 36px' }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 28 }}>
             <div style={{ marginBottom: 14 }}>

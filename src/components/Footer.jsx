@@ -68,7 +68,7 @@ export default function Footer() {
           Crafted with{' '}
           <Heart size={10} fill="var(--rose)" color="var(--rose)" style={{ display: 'inline', marginBottom: -1 }} />
           {' '}by{' '}
-          <span style={{ color: 'var(--rose)', fontWeight: 500 }}>Arfaan</span>
+          <span style={{ color: 'var(--rose)', fontWeight: 500 }}>Arfaan (Your Original Aal Gokul)</span>
         </p>
 
         <p style={{ fontSize: '0.68rem', color: 'var(--text-faint)', marginTop: 6 }}>
